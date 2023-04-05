@@ -3,9 +3,6 @@
 #firebase
 /.firebase
 
-#github
-/.github
-
 # IDE
 /.vscode/
 
