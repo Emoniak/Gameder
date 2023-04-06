@@ -14,8 +14,7 @@ Add a feature to suggest games based on common interests or genres.
 - docker-compose 
 
 ```bash
-docker-compose build
-docker-compose up
+docker-compose up --build
 ```
 
 ## Run to prod Env

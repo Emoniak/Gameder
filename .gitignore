@@ -34,3 +34,7 @@
 
 # vercel
 .vercel
+
+#Python
+
+*_pycache_*
