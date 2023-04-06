@@ -7,3 +7,20 @@ Each user will connect to a common room (eg: 3 friends) and will start scrolling
 When all users have found a game that they might want to play, the app pauses and display a message like “It’s a match, would you go for a game ?!”?
 
 Add a feature to suggest games based on common interests or genres.
+
+## Run to dev env
+### Prerequis
+- docker
+- docker-compose 
+
+```bash
+docker-compose build
+docker-compose up
+```
+
+## Run to prod Env
+### Prerequis
+
+- firebase-cli 
+
+hosting comming soon...
