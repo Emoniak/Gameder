@@ -1,0 +1,20 @@
+FROM node:19.8.1-alpine
+
+WORKDIR /frontend
+
+COPY package*.json .
+
+RUN npm install
+
+COPY . . 
+
+ENV FIREBASE_API_KEY ""
+ENV FIREBASE_AUTH_DOMAIN  "" 
+ENV FIREBASE_PROJECT_ID ""
+ENV FIREBASE_STORAGE_BUCKET ""
+ENV FIREBASE_MESS_SENDER_ID ""
+ENV FIREBASE_APP_ID ""
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
