@@ -8,6 +8,9 @@ service cloud.firestore {
                        (request.auth.token.firebase.sign_in_provider == 'custom' &&
                         request.auth.token.firebase.identities['api-update-game@gameder-1163d.iam.gserviceaccount.com'] != null); 
     }
+    match test/**/{document=**} {
+      allow read, write: if true
+    }
     match /{document=**} {
       allow read, write: if false;
     }

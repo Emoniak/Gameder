@@ -16,7 +16,7 @@ def SetGameToFirestore():
         u"name": u"Jeux de test"
     }
 
-    db.collection("user").document(userid).collection("steamlib").document(steamgameid).set(games)
+    db.collection("production").document(userid).collection("steamlib").document(steamgameid).set(games)
     
     response = {'message': 'Données publiées avec succès'}
 
