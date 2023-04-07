@@ -2,6 +2,6 @@ from flask import jsonify
 
 from api import app
 
-@app.route('/ping', methods=['GET'])
+@app.route('/steam', methods=['GET'])
 def ping():
     return jsonify({'message': 'pong'})

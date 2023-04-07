@@ -1,4 +1,4 @@
-FROM python:3.9.2
+FROM python:3.9.2-slim-buster
 
 WORKDIR /python-docker
 
@@ -7,9 +7,11 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt 
 
 COPY app.py .
+COPY config.py .
 COPY api api
 
 ENV FLASK_APP=app.py
+ENV STEAM_API_KEY=""
 
 EXPOSE 5000
 
