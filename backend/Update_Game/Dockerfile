@@ -7,7 +7,10 @@ COPY requirements.txt requirements.txt
 RUN pip3 install -r requirements.txt 
 
 COPY app.py .
+
 COPY config.py .
+COPY gameder-1163d-39552ceb875d.json .
+
 COPY api api
 
 ENV FLASK_APP=app.py

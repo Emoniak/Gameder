@@ -9,7 +9,7 @@ services :
     ports:
       - "3000:3000"
   steam:
-    build: ./backend/Update_Steam_Game
+    build: ./backend/Update_Game
     environment:
       - STEAM_API_KEY=${STEAM_API_KEY}
     ports:

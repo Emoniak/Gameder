@@ -1,6 +1,6 @@
-import subprocess
 import sys
 from flask import jsonify
+import json
 
 from api import app
 app.config.from_object('config.Config')
@@ -9,9 +9,17 @@ app.config.from_object('config.Config')
 def ping():
     return jsonify({'message': 'pong'})
 
-@app.route('/steamkey', methods=['GET'])
+@app.route('/config', methods=['GET'])
 def steamkey():
-    return jsonify({'key': app.config['STEAM_API_KEY']})
+    with open(app.config['FIREBASE_CRED_CERTIFITACE']) as f:
+        firebaseConfig = json.load(f)
+    config = {
+        'steamkey' :  app.config['STEAM_API_KEY'],
+        'firebaseCertifPath' : app.config['FIREBASE_CRED_CERTIFITACE'],
+        'firebaseCertif' : firebaseConfig
+    }
+
+    return jsonify(config)
 
 @app.route('/', methods=['GET'])
 def index():
