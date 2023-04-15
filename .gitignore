@@ -39,3 +39,4 @@ gameder-*.json
 #Python
 
 *_pycache_*
+*/tests/rapports/*
